@@ -1,0 +1,262 @@
+/* CSS declarations go here */
+@font-face{
+	font-family:"Trade Gothic";
+	src: url('/public/fonts/tradegothic/TradeGothicLTStd.otf') format('opentype');
+	font-weight: normal;
+	font-style:normal;
+}
+@font-face{
+	font-family:"Trade Gothic";
+	src: url('/public/fonts/tradegothic/TradeGothicLTStd-Bd2.otf') format('opentype');
+	font-weight: bold;
+	font-style:normal;
+}
+body{
+	margin:0;
+	min-width:480px;
+}
+header{
+	z-index:100;
+}
+/* Fonts */
+.sitefont1{
+	font-family: "Fredoka One", cursive;
+}
+.sitefont2{
+	font-family: "Monserrat", sans-serif;
+}
+.fntsizexsmall{
+	font-size: 1.0rem;
+}
+.fntsizesmall{
+	font-size: 1.4rem;
+}
+.fntsizemid{
+	font-size: 2rem;
+}
+.fntsizelarge{
+	font-size: 2.6rem;
+}
+.fntsizexlarge{
+	font-size: 3.2rem;
+}
+.fntbld{
+	font-weight: bold;
+}
+.fntbldr{
+	font-weight: bolder;
+}
+.fntital{
+	font-style: italic;
+}
+
+.fntcolor1{
+	color:white;
+}
+.fntcenter{
+	text-align: center;
+}
+.fntspacesmall{
+	letter-spacing: 0.1rem;
+}
+/* Main classes */
+/* Background Colors and stuff. */
+.background1{background-color: rgba(0,0,0,0.4);}
+.background2{background-color: black;}
+.background5{background-color: #27DD27;}
+.background6{background-color: #326BC6;}
+.background7{background-color: #FFB32D;}
+.background8{background-color: #FF2D2D;}
+.backgroundfemale{background-color: #E1066A;}
+.backgroundmale{background-color: #1C3DC3;}
+.backgroundmedia{background-color:#91F007;}
+/* Header stuffs */
+.navigation{
+	width:100vw;
+	height:4rem;
+	position:fixed;
+	display:flex;
+	justify-content: center;
+	top:0;
+	
+}
+.navigation a, .navigation a:visited{
+	text-decoration: none;
+	color:white;
+}
+.navigation > *{
+	margin:1rem auto;
+	display: inline-block;
+	position: relative;
+}
+/* Frontpage Stuff */
+#coolbackground{
+	min-height: 100vh;
+}
+
+/* Login Modal */
+.headersignform{
+	display: block;
+	position: fixed;
+	right:5%;
+	top:8rem;
+	width:15vw;
+	min-width: 350px;
+	border-radius: 2rem;
+}
+.headersignform > label{
+	text-align: center;
+}
+.headersignform > *,.imageuploadform > *{
+	display: block;
+	width:80%;
+	position:relative;
+	margin:0.5rem auto;
+	padding:0.75rem;
+}
+.headersignform > input[type="text"],.headersignform > input[type="password"],.headersignform > input[type="email"],.imageuploadform > input[type="text"],.imageuploadform > input[type="password"],.imageuploadform > input[type="email"]{
+	background-color: transparent;
+	border:0;
+	border-bottom: 0.2rem solid white;
+	text-align: center;
+}
+form > input[type="submit"]{
+	margin:1rem auto;
+}
+.loginmodal{
+	display: flex;
+	justify-content: center;
+}
+.loginmodal > *{
+	display: inline-block;
+	margin:1rem auto;
+}
+.loginmodal > button{
+	background-color: transparent;
+	border:0;
+}
+/* Containers */
+.largecontainer{
+	width:60%;
+	max-width:1000px;
+	position: relative;
+	margin:2rem auto;
+	padding:2rem;
+	min-height:60vh;
+}
+.mediumcontainer{
+	width:40%;
+	max-width:800px;
+	min-width:350px;
+	min-height: 4rem;
+}
+g > .mediumcontainer{
+	width:80%;
+}
+.easyflex{
+	display: flex;
+}
+.lazyflexinline > *{
+	display: inline-block;
+}
+.centerflex{
+	justify-content: center;
+}
+.columnflex{
+	flex-direction:column-reverse
+}
+.autocenter{
+	position: relative;
+	display: block;
+	margin:1rem auto;
+}
+/* Lists Styles */
+.taglist{
+	list-style: none;
+	padding-left: 0;
+}
+.taglist li{
+	display: inline-block;
+	min-width:15%;
+	position: relative;
+	border-radius: 1rem;
+	padding:0.5rem 1rem;
+	margin:0.5rem auto;
+	text-align: center;
+}
+.taglist > g{
+	width:100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.tagbubble .canceltag{
+	display: inline-block;
+	position: absolute;
+	right:10px;
+}
+.tagcategorycontainer > p{
+	margin:0.5rem auto;
+}
+.tagcategorycontainer{
+	margin:0 auto;
+	padding:0.25rem;
+}
+.taginline{
+	padding-right: 1rem;
+}
+/*Border Stuffs */
+.softradius{
+	border-radius: 2rem;
+}
+/* React Animations */
+.example{
+	opacity: 0.01;
+}
+.example-appear.example-appear-active {
+   opacity: 1;
+   transition: opacity 500ms ease-in;
+}
+/*Image Stuffs*/
+.simpleuploadimage{
+	width:100%;
+	height:auto;
+	position: relative;
+	display: block;
+}
+#uploadimagecontainer{
+	padding:2rem;
+	margin:2rem auto;
+	max-width:50%;
+	position: relative;
+}
+.imageuploadform{
+	display: block;
+	position: relative;
+	border-radius: 2rem;
+	width:60%;
+	max-height:80vh;
+	overflow-y: scroll;
+}
+.imageuploadform > .okaycircle{
+	width:auto;
+	border-radius: 50%;
+	padding:1rem;
+	position: relative;
+	display: inline-block;
+}
+.ageradiocontainer > input[type="radio"]{
+	top:1rem;
+	position: relative;
+
+}
+.ageradiocontainer > *{
+	margin:1rem auto;
+	position: relative;
+}
+.ageradiocontainer > p{
+	max-width:70%;
+}
+
+
+
