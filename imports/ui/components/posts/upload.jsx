@@ -6,6 +6,7 @@ import { createContainer } from 'meteor/react-meteor-data';
 
 import Anime from 'react-anime';
 import CreateTags from './createtags.jsx';
+import TagParser from '../../../utilities/TagParser.js';
 
 class PostsCreateContainer extends Component{
 	constructor(props){
@@ -102,41 +103,14 @@ class PostsCreateContainer extends Component{
 	updateTags(e){
 		if (e.keyCode == 13){
 			e.preventDefault();
-			var tag = ReactDOM.findDOMNode(this.refs.ImageTags).value.trim().split(',')
+			var tag = ReactDOM.findDOMNode(this.refs.ImageTags).value.trim()
 			var tagObj = this.state.tags;
 			var desObj = tagObj.descriptors
 			console.log(tag)
-			tag.forEach((x,i)=>{
-				x = x.trim();
-				console.log(x,x.match(/^\$[a-zA-Z0-9]{1,}:/))
-				if(x.match(/^\$[a-zA-Z0-9]{1,}:/)){
-					x = x.split(":");
-					x[0] = x[0].substring(1)
-					if (!desObj.hasOwnProperty(x[0])){
-						desObj[x[0]] = []
-					}
-					var specObj = {tagname:x[1],_id:i}
-					desObj[x[0]].push(specObj)
-				}
-				else if(x.match(/^\@[a-zA-Z0-9]{1,}:/)){
-					var coolmatch = x.match(/^\@[a-zA-Z0-9]{1,}:/)[0]
-				}
-				else{
-					var genObj = {tagname:x,_id:i}
-					if (x.match(/^[0-9]+ /)){
-						x = x.split(' ',2)
-						console.log(x,tagObj)
-						genObj = {tagname:x[1],count:parseInt(x[0]),_id:i}
-						desObj.general.push(genObj)
-					}
-					else{
-						desObj.general.push(genObj)
-					}
-				}
-			})
-			this.setState({tags:tagObj})
+			var cooltags = new TagParser(tag,tagObj)
+			/*this.setState({tags:tagObj})
 			console.log(this.state);
-			ReactDOM.findDOMNode(this.refs.ImageTags).value = '';
+			ReactDOM.findDOMNode(this.refs.ImageTags).value = '';*/
 
 		}
 	}
