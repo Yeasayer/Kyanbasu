@@ -117,7 +117,9 @@ class AccountsContainer extends Component {
 	}
 	renderLogin(){
 		if (this.state.hidesiform){return ""}
-		else{return(
+		else{
+			console.log("WE SHOULD RENDER NOW!");
+			return(
 				<Anime opacity={[0, 1]} translateY={'1em'} delay={(e, i) => i * 200}>
 				<form id="signinform" className="headersignform background1 sitefont2" onSubmit={this.loginUser.bind(this)} method="POST" ref="signinform">
 					<label htmlFor="username" className="fntsizesmall">What's your name?</label>
@@ -130,11 +132,11 @@ class AccountsContainer extends Component {
 		)}
 	}
 	render(){
-		console.log(this.props.currentUser);
+		console.log(this.props.currentUser,"WAHOO!",this.state);
 		return(
 			<div className="loginmodal">
-				{this.props.currentUser?this.renderLogged(this.props.currentUser):<div><button id="signinbutton" className="signbutton sitefont1 fntcolor1" ref="signinbutton" data-clicked={this.state.hidesiform} onClick={this.animateSiForms.bind(this)}><p>Sign In</p></button>this.renderLogin()</div>}
-				{this.props.currentUser?"":<div><button id="signupbutton" className="signbutton sitefont1 fntcolor1" ref="signupbutton" data-clicked={this.state.hidesuform} onClick={this.animateSuForms.bind(this)}><p>Sign Up</p></button>this.renderCreateAcc()</div>}
+				{this.props.currentUser?this.renderLogged(this.props.currentUser):<div><button id="signinbutton" className="signbutton sitefont1 fntcolor1" ref="signinbutton" data-clicked={this.state.hidesiform} onClick={this.animateSiForms.bind(this)}><p>Sign In</p></button>{this.renderLogin()}</div>}
+				{this.props.currentUser?"":<div><button id="signupbutton" className="signbutton sitefont1 fntcolor1" ref="signupbutton" data-clicked={this.state.hidesuform} onClick={this.animateSuForms.bind(this)}><p>Sign Up</p></button>{this.renderCreateAcc()}</div>}
 			</div>
 		)
 	}

@@ -11,7 +11,6 @@ class CreateTags extends Component{
 
 	}
 	render(){
-		console.log(this.props)
 		return(
 		<li className={this.props.css}><span className="taginline">{this.props.tag.count} {this.props.tag.tagname}</span><span className="canceltag" onClick={()=>this.props.delFunction(this.props.key,this.props.parent)}>⨉</span></li>
 		)

@@ -1,0 +1,10 @@
+1 boy,$male:tomgirl,$male:crossdressing,$male:blue eyes,$male: navel,$character:Veight,$series: Granblue Fantasy
+
+@$character:Emperor Penguin->($female:hair over one eye,$female:blush,$female:headphones)
+
+@$franchise:Fate->($series:Fate/Grand Order,$series:Fate/Apocrypha),@$series:Fate/Grand Order->($character:Rider of Black,$character:Fujimaru Ritsuka),@$character:Rider of Black->($gender:male,$male:fang,$male:pink hair,$male:side ponytail,$male:heart-shaped pupils,$male:tomgirl,$male:otoko no ko),$language:None,2 people,@$character:Fujimaru Ritsuka->($gender:female,$female:embarassment)
+
+OpenLP
+
+
+70309487
