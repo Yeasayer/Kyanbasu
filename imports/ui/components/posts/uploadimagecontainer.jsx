@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom';
 import { Accounts } from 'meteor/accounts-base';
 import { createContainer } from 'meteor/react-meteor-data';
 
+import Anime from 'react-anime';
+
 class UploadImageContainer extends Component{
 
 	render(){
 		return(
-			<div id="uploadimagecontainer" className=" background1 mediumcontainer softradius fntcolor1">
-				<img className="simpleuploadimage" src={this.props.source} alt={this.props.imagename}/>
-			</div>
+			<Anime opacity={[0, 1]} translateY={'1em'} delay={(e, i) => i * 400}>
+				<img className="simpleuploadimage background1 softradius" src={this.props.source} alt={this.props.imagename}/>
+			</Anime>
 		)
 	}
 }

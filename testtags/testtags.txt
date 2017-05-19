@@ -4,6 +4,26 @@
 
 @$franchise:Fate->($series:Fate/Grand Order,$series:Fate/Apocrypha),@$series:Fate/Grand Order->($character:Rider of Black,$character:Fujimaru Ritsuka),@$character:Rider of Black->($gender:male,$male:fang,$male:pink hair,$male:side ponytail,$male:heart-shaped pupils,$male:tomgirl,$male:otoko no ko),$language:None,2 people,@$character:Fujimaru Ritsuka->($gender:female,$female:embarassment)
 
+@$series:Kemono Friends->($character:Emperor Penguin),@$character:Emperor Penguin->($gender:female,$female:large breasts,$female:black hair,$female:hair over one eye,$female:headphones,$female:leotard)
+
+
+Konno Tohiro
+@$series:Kemono Friends->($character:Emperor Penguin),@$series:Kantai Collection->($character:Tenryuu),@$character:Tenryuu->($gender:female,$female:purple hair,$female:eyepatch,$female:yellow eyes,$female:huge breasts,$clothing:hoodie,$clothing:leotard)
+
+Metata
+@$series:Little Witch Academia->($character:Atsuko Kagari),@$character:Atsuko Kagari->($gender:female,$female:brown hair,$female:brown eyes,$clothing:white panties,$object:broomstick,$clothing:witch hat,$female:smile)
+
+Niwatori Kokezou
+@$series:Little Witch Academia->($character:Shiny Chariot,$character:Ursula Charistes),@$character:Ursula Charistes->($gender:female,$female:blue hair,$female:red eyes,$clothing:glasses,$object:broomstick,$female:large breasts,$clothing:witch hat),@$object:broomstick->($action:riding)
+
+@$series:Little Witch Academia->($character:Amanda O'Neill,$character:Atsuko Kagari),@$character:Amanda O'Neill->($gender:female,$female:green eyes,$female:orange hair,$female:small breasts,$action:dancing,$clothing:black bra,$clothing:black panties),$language:English
+
+//Some SFW Stuff
+
+@$series:Floating Inu Paradise->($character:Cool Pup),@$character:Cool Pup->($gender:female,$female:fur,$species:dog,$object:bodyboard)
+
+
+
 OpenLP
 
 

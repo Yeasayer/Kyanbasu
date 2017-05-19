@@ -53,6 +53,15 @@ header{
 .fntcolor1{
 	color:white;
 }
+.fntcolorok{
+	color:#27DD27;
+}
+.fntcolorwarn{
+	color:#FFB32D;
+}
+.fntcolorerr{
+	color:#FF2D2D;
+}
 .fntcenter{
 	text-align: center;
 }
@@ -72,6 +81,7 @@ header{
 .backgroundfemale{background-color: #E1066A;}
 .backgroundmale{background-color: #1C3DC3;}
 .backgroundmedia{background-color:#91F007;}
+.backgroundspecies{background-color:#bf8040;}
 .backgroundgender{
 	background: linear-gradient(to bottom right, #1C3DC3 25%, #E1066A 75%);
 	background: -o-linear-gradient(bottom right, #1C3DC3 25%, #E1066A 75%);
@@ -112,6 +122,10 @@ header{
 	z-index:8;
 	width:100vw;
 	height:100vh;
+}
+#infomodalcontainer{
+	position:relative;
+
 }
 /* Login Modal */
 .headersignform{
@@ -154,6 +168,42 @@ form > input[type="submit"]{
 	background-color: transparent;
 	border:0;
 }
+/*Links Stuff for Header*/
+@keyframes openlinksforms{
+	0%{height:0rem;}
+	100%{height:2rem;}
+}
+.linkscontainer{
+	min-width:16rem;
+}
+.linkscontainer > *{
+	margin:0 auto;
+	position: relative;
+	display:inline-block;
+}
+
+.linkmodal{
+	list-style: none;
+	padding-left: 0;
+}
+
+.linkmodal:hover > li:nth-child(n+2){
+
+	animation: openlinksforms;
+	animation-duration: 1s;
+	overflow:visible;
+}
+.linkmodal > li:nth-child(n+2){
+	height:0rem;
+	animation: openlinksforms;
+	animation-duration: 1s;
+	animation-direction: reverse;
+	overflow:hidden;
+}
+.linkmodal > li:nth-child(1){
+	height:2rem;
+	width:100%;
+}
 /* Containers */
 .largecontainer{
 	width:60%;
@@ -172,6 +222,27 @@ form > input[type="submit"]{
 g > .mediumcontainer{
 	width:80%;
 }
+#gallerycontainer, #singlecontainer{
+	width:90%;
+}
+div#singlecontainer > g{
+	width:80%;
+	margin:1rem auto;
+	min-width:480px;
+	display: inline-block;
+	position: relative;
+}
+div#gallerycontainer > g{
+	width:20%;
+	margin:1rem auto;
+	min-width:360px;
+	display:inline-block;
+	position: relative;
+}
+div#gallerycontainer > g > a{
+	width:100%;
+	height:100%;
+}
 .easyflex{
 	display: flex;
 }
@@ -181,6 +252,9 @@ g > .mediumcontainer{
 .centerflex{
 	justify-content: center;
 }
+.easywrap{
+	flex-wrap: wrap;
+}
 .columnflex{
 	flex-direction:column-reverse
 }
@@ -189,10 +263,14 @@ g > .mediumcontainer{
 	display: block;
 	margin:1rem auto;
 }
+.autoclear{
+	margin-top:5rem;
+}
 /* Lists Styles */
 .taglist{
 	list-style: none;
 	padding-left: 0;
+	max-width:90%;
 }
 .taglist li{
 	display: inline-block;
@@ -212,6 +290,11 @@ g > .mediumcontainer{
 .tagbubble .canceltag{
 	display: inline-block;
 	position: absolute;
+	right:10px;
+}
+.tagbubble .votetag{
+	display: inline-block;
+	position: relative;
 	right:10px;
 }
 .tagcategorycontainer > p{
@@ -238,17 +321,54 @@ g > .mediumcontainer{
 }
 /*Image Stuffs*/
 .simpleuploadimage{
-	width:100%;
+	width:auto;
+	min-width:30%;
+	max-width: 60%;
 	height:auto;
+	max-height:80vh;
+	position: relative;
+	display: block;
+	padding:2rem;
+	margin:2rem auto;
+}
+.galleryimage{
+	max-width:50%;
+	height:auto;
+	max-height:350px;
+	position: relative;
+	display: inline-block;
+	padding: 1rem;
+	margin:1rem auto;
+}
+.fullimage{
+	max-height:80vh;
+	width:auto;
+	position: relative;
+	display: block;
+	padding: 1rem;
+	margin:1rem auto;
+}
+div.easyflex > g{
+	width:50%;
+	min-width:480px;
+}
+div#singlecontainer > g{
+	width:100%;
+}
+.uploadimagecontainer{
+	padding:2rem;
+	margin:2rem auto;
+	max-height:80vh;
+	min-width:30%;
+	max-width:60%;
 	position: relative;
 	display: block;
 }
-#uploadimagecontainer{
-	padding:2rem;
-	margin:2rem auto;
-	width:70%;
-	max-width:700px;
-	position: relative;
+.noborder{
+	border:0;
+}
+.buttonpadding{
+	padding:1rem 2rem;
 }
 .imageuploadform{
 	display: block;
